@@ -1,0 +1,92 @@
+@import '../constants';
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: $color-grey;
+    font-family: $primary-font;
+}
+
+.social-media {
+    &__list {
+        list-style: none;
+    }
+
+    &__item {
+        padding: 10px;
+        width: 210px;
+        position: absolute;
+        right: -190px;
+        transition-duration: 400ms;
+        &:hover {
+            right: 0;
+        }
+
+        &--blog {
+            background-color: $blog-color; 
+            top: 38px;
+        }
+
+        &--twitter {
+            background-color: $twitter-color;
+            top: 76px;
+        }
+
+        &--linkedin {
+            background-color: $linkedin-color;
+            top: 114px;
+        }
+
+        &--facebook {
+            background-color: $facebook-color;
+            top: 152px;
+        }
+
+        &--github {
+            background-color: $github-color;
+            top: 190px;
+        }
+    }
+
+    &__icon {
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        color: $color-white;
+
+        &--blog::before {
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            content: '\f5fc';
+        }
+
+        &--twitter::before {
+            font-family: 'Font Awesome 5 Brands';
+            content: '\f099';
+        }
+
+        &--linkedin::before {
+            font-family: 'Font Awesome 5 Brands';
+            content: '\f0e1';
+        }
+    
+        &--facebook::before {
+            font-family: 'Font Awesome 5 Brands';
+            content: '\f39e';
+        }
+    
+        &--github::before {
+            font-family: 'Font Awesome 5 Brands';
+            content: '\f09b';
+        }
+    }
+
+    &__link {
+        color: $color-white;
+        margin-left: 25px;
+    }
+}
